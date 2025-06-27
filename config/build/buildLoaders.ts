@@ -18,8 +18,8 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         options: {
           // проблемма с модулем
           modules: {
-            namedExport: false,
-            exportLocalsConvention: "as-is",
+            // namedExport: false,
+            // exportLocalsConvention: "as-is",
             auto: (resPath: string) => Boolean(resPath.includes(".module.")),
             localIdentName: isDev
               ? "[path][name]__[local]-[hash:base64:5]"

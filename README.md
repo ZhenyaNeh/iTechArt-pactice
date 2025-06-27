@@ -20,3 +20,26 @@ https://webpack.js.org/guides/typescript/#basic-setup)
 7. Добавить react-router (не react-router-dom), добавить базовые страницы Home\Main и About;
 8. Добавить кнопки-ссылки на существующие страницы, настроить роутинг;
 9. Code splitting (lazy-Suspence): разделить общий бандл на части, чтобы код каждой страницы загружался отдельно;
+
+26.06.2025
+1. Добавить использование двух тем в приложение (с использованием переменных и ThemeContext, создать кастомный хук useTheme);
+2. Добавить хелпер-функцию classNames, которая:
+  - Первым аргументом принимает массив строк - те классы, которые применяются 100%;
+  - Вторым аргументом (опционально) принимает объект, у которого ключи - имена классов, которые должны быть применены по условию, значение - boolean тип, если передано true, то данный класс (ключ) применяется;
+  - Результатом возвращает строку, состояющую из базовых классов первого аргумента (массива строк) + опциональные классы, у которых значение true, если в результате получается постуя строка, то возвращаться undefined;
+3. Прочитать для своего развития о CSS-in-JS подходе:
+  - https://htmlacademy.ru/blog/js/css-in-js
+  - https://gajus.medium.com/stop-using-css-in-javascript-for-web-development-fa32fb873dcc
+4. ДОПОЛНИТЕЛЬНО: начать просмотр курса по TypeScript, который не обязательно завершать сейчас, но в течении месяца мы будем иногда к этому возвращаться, потому что TS 100% нужно изучить чуть лучше, чем это раскрыто в основном курсе:
+  - Видео: https://www.youtube.com/watch?v=LWtHl__oEWc&pp=ygUSdWxiaSB0diB0eXBlc2NyaXB0
+  - Документация (для справки): https://www.typescriptlang.org/docs/
+  - Playground (для того, чтобы пробовать "руками"): https://www.typescriptlang.org/play/
+
+  Пример:
+//  theme === 'dark'; disabled === true, focused === false
+ 
+const res1 = classNames([theme, 'profile'], { disabled, focused });
+// res1 === 'dark profile disabled'
+ 
+const res2 = classNames([], { focused });
+// res2 === undefined;
