@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div className={classNames(['app', theme])}>
       <button onClick={toggleTheme}>
-        theme {theme === Theme.DARK ? "dark" : "light"}
+        theme {theme}
       </button>
       <nav>
         <Link to={"/"} className="link">
