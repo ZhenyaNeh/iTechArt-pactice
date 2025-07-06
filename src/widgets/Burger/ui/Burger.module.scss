@@ -1,0 +1,52 @@
+.burger {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 9.5px;
+  transition: all 0.5s ease;
+
+  .menuContent {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+.collapsed {
+  width: 200px;
+  background: var(--bg-color);
+  padding: 8px;
+  height: 90vh;
+  top: 0px;
+  right: 0px;
+  border: 1.5px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+
+  .menuContent {
+    opacity: 1;
+    height: 100%;
+    flex-grow: 1;
+    visibility: visible;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .menuLink {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  .themeSwitcherWrapper {
+    margin-top: auto;
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
