@@ -3,6 +3,10 @@
 @use "themes/dark";
 @use "themes/normal";
 
+$navbar-max-width: 1200px;
+$navbar-max-width-lg: 1400px;
+$navbar-breakpoint-lg: 2400px;
+
 * {
   margin: 0;
   padding: 0;
@@ -15,4 +19,35 @@
   color: var(--primary-color);
 
   min-height: 100vh;
+}
+
+.content-page-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-page {
+  max-width: $navbar-max-width;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+  // align-items: center;
+}
+
+.page-wrapper {
+  padding: 8px;
+  flex-grow: 1;
+}
+
+// .navbars-width {
+  
+// }
+
+@media (min-width: $navbar-breakpoint-lg) {
+  .content-page-wrapper {
+    max-width: $navbar-max-width-lg;
+  }
 }
