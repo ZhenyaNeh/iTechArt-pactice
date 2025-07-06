@@ -3,6 +3,8 @@ import App from "./app/App";
 import { BrowserRouter } from "react-router";
 import { ThemeProvidor } from "app/providers/ThemePovidor";
 
+import "shared/config/i18n/i18n";
+
 const domNode = document.getElementById("root");
 
 if (domNode) {

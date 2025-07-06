@@ -1,0 +1,15 @@
+
+.sidebar {
+  height: calc(100vh - 9vh);
+  width: var(--sidebar-width);
+  background-color: var(--bg-color);
+  padding: 8px;
+  border-right: 1.5px solid var(--border-color);
+  position: relative;
+  transition: width 0.5s;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+  // display: none;
+}

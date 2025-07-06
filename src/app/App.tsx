@@ -2,15 +2,25 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { useTheme } from "app/providers/ThemePovidor";
 import { AppRouter } from "app/providers/routes";
 import { Navbar } from "widgets/Navbar";
+import { Sidebar } from "widgets/Sidebar";
 import "./style/index.scss";
+import { Suspense } from "react";
+import { Loader } from "lucide-react";
 
 const App = () => {
-  const {theme} = useTheme();
-  
+  const { theme } = useTheme();
+
   return (
     <div className={classNames(["app", theme])}>
-      <Navbar />
-      <AppRouter />
+      <Suspense fallback={<Loader size={32} />}>
+        <Navbar />
+        <div className="content-page-wrapper">
+          <div className="content-page">
+            {/* <Sidebar /> */}
+            <AppRouter />
+          </div>
+        </div>
+      </Suspense>
     </div>
   );
 };
