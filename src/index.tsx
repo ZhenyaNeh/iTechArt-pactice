@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import App from './app/App';
 import { BrowserRouter } from 'react-router';
-import { ThemeProvidor } from 'app/providers/ThemePovidor';
+import { ThemeProvider } from 'app/providers/ThemeProvider';
 
 import 'shared/config/i18n/i18n';
 
@@ -11,9 +11,9 @@ if (domNode) {
   const root = createRoot(domNode);
   root.render(
     <BrowserRouter>
-      <ThemeProvidor>
+      <ThemeProvider>
         <App />
-      </ThemeProvidor>
+      </ThemeProvider>
     </BrowserRouter>
   );
 } else {

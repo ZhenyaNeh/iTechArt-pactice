@@ -8,9 +8,10 @@
     "start": "npx webpack serve --env port=3000",
     "build:prod": "npx webpack --env mode=production",
     "build:dev": "npx webpack --env mode=development",
-    "lint": "eslint .",
-    "format": "prettier --write .",
-    "lint:fix": "eslint --fix ."
+    "lint:ts": "eslint .",
+    "lint:ts:fix": "eslint --fix .",
+    "lint:css": "stylelint \"**/*.scss\"",
+    "lint:css:fix": "stylelint \"**/*.scss\" --fix"
   },
   "keywords": [],
   "author": "",
@@ -43,6 +44,8 @@
     "sass": "^1.89.2",
     "sass-loader": "^16.0.5",
     "style-loader": "^4.0.0",
+    "stylelint": "^16.21.1",
+    "stylelint-config-standard-scss": "^15.0.1",
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",

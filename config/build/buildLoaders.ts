@@ -47,7 +47,6 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
       {
         loader: 'css-loader',
         options: {
-          // проблемма с модулем
           modules: {
             namedExport: false,
             exportLocalsConvention: 'as-is',

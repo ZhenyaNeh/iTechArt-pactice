@@ -14,10 +14,8 @@ $navbar-breakpoint-lg: 2400px;
 
 .app {
   font: var(--font-m);
-
   background: var(--bg-color);
   color: var(--primary-color);
-
   min-height: 100vh;
 }
 
@@ -34,6 +32,7 @@ $navbar-breakpoint-lg: 2400px;
   display: flex;
   justify-content: flex-start;
   flex-grow: 1;
+
   // align-items: center;
 }
 
