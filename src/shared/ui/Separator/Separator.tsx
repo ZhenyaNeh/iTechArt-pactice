@@ -1,19 +1,19 @@
-import { classNames } from "shared/lib/classNames/classNames";
-import cls from "./Separator.module.scss";
+import { classNames } from 'shared/lib/classNames/classNames';
+import cls from './Separator.module.scss';
 
 const enum SeparatorOrientation {
-  VERTICAL = "vertical",
-  HORIZONTAL = "horizontal",
+  VERTICAL = 'vertical',
+  HORIZONTAL = 'horizontal',
 }
 
 interface SeparatorProps {
-  variant: "vertical" | "horizontal";
+  variant: 'vertical' | 'horizontal';
   className?: string;
 }
 
 const Separator = ({
-  variant = "horizontal",
-  className = "",
+  variant = 'horizontal',
+  className = '',
 }: SeparatorProps) => {
   return (
     <div
@@ -21,8 +21,8 @@ const Separator = ({
         cls.separator,
         `${
           variant === SeparatorOrientation.VERTICAL
-            ? cls["vertical-separator"]
-            : cls["horizontal-separator"]
+            ? cls['vertical-separator']
+            : cls['horizontal-separator']
         }`,
         className,
       ])}

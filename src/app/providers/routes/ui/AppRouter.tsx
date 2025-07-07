@@ -1,7 +1,7 @@
-import { Loader } from "lucide-react";
-import { Suspense } from "react";
-import { Route, Routes } from "react-router";
-import { routeConfig } from "shared/config/routeConfig/routeConfig";
+import { Loader } from 'lucide-react';
+import { Suspense } from 'react';
+import { Route, Routes } from 'react-router';
+import { routeConfig } from 'shared/config/routeConfig/routeConfig';
 
 const AppRouter = () => {
   return (

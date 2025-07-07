@@ -7,7 +7,7 @@ export function classNames(mainClass: string[] | string, optionalMods?: Optional
         .map(([key]) => key)
     : [];
 
-    const cls = typeof mainClass === "string"  ? [mainClass] : mainClass;  
+    const cls = typeof mainClass === 'string'  ? [mainClass] : mainClass;  
 
   return [...cls.filter(Boolean), ...mods].join(' ').trim();
 }

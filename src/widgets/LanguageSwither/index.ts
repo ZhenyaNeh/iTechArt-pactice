@@ -1,3 +1,3 @@
-import { LanguageSwither } from "./ui/LanguageSwitcher";
+import { LanguageSwither } from './ui/LanguageSwitcher';
 
 export { LanguageSwither };
