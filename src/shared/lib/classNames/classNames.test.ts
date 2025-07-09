@@ -3,7 +3,6 @@ import { classNames } from "./classNames";
 const theme = 'dark';
 const disabled = true;
 const focused = false;
-const checked = undefined;
 
 describe("classNames", () => {
   test("test only with first param", () => {
