@@ -1,11 +1,11 @@
-import { Loader } from 'lucide-react';
 import { Suspense } from 'react';
 import { Route, Routes } from 'react-router';
 import { routeConfig } from 'shared/config/routeConfig/routeConfig';
+import { PageLoader } from 'widgets/PageLoader';
 
 const AppRouter = () => {
   return (
-    <Suspense fallback={<Loader size={32} />}>
+    <Suspense fallback={<PageLoader />}>
       <Routes>
         {Object.values(routeConfig).map(({ element, path }) => (
           <Route
