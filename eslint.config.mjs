@@ -1,3 +1,5 @@
+import storybook from "eslint-plugin-storybook";
+
 import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -14,7 +16,7 @@ export default defineConfig([
       "**/.next/**",
       "**/out/**",
       "**/coverage/**",
-      "**/public/**", 
+      "**/public/**",
       "**/*.config.js",
     ],
   },
@@ -33,19 +35,23 @@ export default defineConfig([
     languageOptions: { globals: globals.browser },
   },
   tseslint.configs.recommended,
+  storybook.configs.recommended,
   pluginReact.configs.flat.recommended,
   pluginReact.configs.flat["jsx-runtime"],
   {
     files: ["**/*.{jsx,tsx,js,ts}"],
     rules: {
       "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
       "@typescript-eslint/no-unused-vars": [
-        "warn",
+        "error",
         {
+          args: "all",
           argsIgnorePattern: "^_",
-          varsIgnorePattern: "^_",
+          caughtErrors: "all",
           caughtErrorsIgnorePattern: "^_",
+          destructuredArrayIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          ignoreRestSiblings: true,
         },
       ],
     },
