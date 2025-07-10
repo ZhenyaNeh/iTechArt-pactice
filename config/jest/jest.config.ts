@@ -4,6 +4,7 @@
  */
 
 import type {Config} from 'jest';
+import path from 'path';
 
 const config: Config = {
   // All imported modules in your tests should be mocked automatically
@@ -77,6 +78,10 @@ const config: Config = {
     "node_modules"
   ],
 
+  modulePaths: [
+    "<rootDir>src"
+  ],
+
   // An array of file extensions your modules use
   moduleFileExtensions: [
     "js",
@@ -140,6 +145,17 @@ const config: Config = {
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
   // setupFilesAfterEnv: [],
+  setupFilesAfterEnv: [
+    '<rootDir>/config/jest/setupTests.ts'
+  ],
+
+  moduleNameMapper: {
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/__mocks__/fileMock.js',
+    '\\.(css|less|scss)$': 'identity-obj-proxy',
+    // '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    '\\.svg': '<rootDir>/config/jest/jestEmptyComponent.tsx',
+  },
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
