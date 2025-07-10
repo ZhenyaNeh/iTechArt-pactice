@@ -19,18 +19,12 @@
   padding: 3px;
 }
 
-// .dark {
-//   @extend .clear;
-//   color: var(--primary-color);
-//   border: 2px solid var(--border-color);
-//   border-radius: 15px;
-//   padding: 5px;
-// }
-
-// .dark {
-//   @extend .clear;
-//   color: var(--primary-color);
-//   border: 2px solid var(--border-color);
-//   border-radius: 15px;
-//   padding: 5px;
-// }
+.dark {
+  margin: 0;
+  outline: none;
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 3px;
+}

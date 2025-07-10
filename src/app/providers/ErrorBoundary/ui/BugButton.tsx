@@ -1,5 +1,4 @@
 import { classNames } from "shared/lib/classNames/classNames";
-// import cls from "./BugButton.module.scss";
 import { Button } from "shared/ui/Button/Button";
 import { useEffect, useState } from "react";
 

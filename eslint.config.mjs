@@ -35,13 +35,14 @@ export default defineConfig([
     languageOptions: { globals: globals.browser },
   },
   tseslint.configs.recommended,
-  storybook.configs.recommended,
+  storybook.configs["flat/recommended"],
   pluginReact.configs.flat.recommended,
   pluginReact.configs.flat["jsx-runtime"],
   {
     files: ["**/*.{jsx,tsx,js,ts}"],
     rules: {
       "react/prop-types": "off",
+      "react/display-name": "off",
       "@typescript-eslint/no-unused-vars": [
         "error",
         {
