@@ -18,7 +18,7 @@ $navbar-breakpoint-sm: 501px;
 
 %navbar-container {
   @extend %navbar-wrapper;
-  
+
   height: 40px;
   padding-top: $navbar-padding;
   margin: 0;
@@ -41,7 +41,7 @@ $navbar-breakpoint-sm: 501px;
 
 .navbar {
   @extend %navbar;
-  
+
   &-left {
     @extend %navbar;
 
@@ -52,14 +52,14 @@ $navbar-breakpoint-sm: 501px;
   &-center {
     @extend %navbar;
   }
-  
+
   &-right {
     @extend %navbar;
 
     justify-content: flex-end;
     padding-right: $navbar-padding;
   }
-  
+
   &-burger {
     @extend %navbar;
 
@@ -89,7 +89,7 @@ $navbar-breakpoint-sm: 501px;
   .navbar-center {
     display: none;
   }
-  
+
   .navbar-right {
     display: none;
   }

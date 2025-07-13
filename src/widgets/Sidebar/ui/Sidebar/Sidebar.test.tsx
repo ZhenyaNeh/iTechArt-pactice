@@ -6,5 +6,4 @@ describe('Sidebar test', () => {
     render(<Sidebar />);
     expect(screen.getByTestId('sidebar')).toBeInTheDocument();
   });
-  
 });

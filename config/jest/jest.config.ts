@@ -3,7 +3,7 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type {Config} from 'jest';
+import type { Config } from 'jest';
 
 const config: Config = {
   // All imported modules in your tests should be mocked automatically
@@ -28,9 +28,7 @@ const config: Config = {
   // coverageDirectory: undefined,
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: [
-    "\\\\node_modules\\\\",
-  ],
+  coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
 
   // Indicates which provider should be used to instrument code for coverage
   // coverageProvider: "babel",
@@ -73,26 +71,22 @@ const config: Config = {
   // maxWorkers: "50%",
 
   // An array of directory names to be searched recursively up from the requiring module's location
-  moduleDirectories: [
-    "node_modules"
-  ],
+  moduleDirectories: ['node_modules'],
 
-  modulePaths: [
-    "<rootDir>src"
-  ],
+  modulePaths: ['<rootDir>src'],
 
   // An array of file extensions your modules use
   moduleFileExtensions: [
-    "js",
-    "mjs",
-    "cjs",
-    "jsx",
-    "ts",
-    "mts",
-    "cts",
-    "tsx",
-    "json",
-    "node"
+    'js',
+    'mjs',
+    'cjs',
+    'jsx',
+    'ts',
+    'mts',
+    'cts',
+    'tsx',
+    'json',
+    'node',
   ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
@@ -144,9 +138,7 @@ const config: Config = {
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
   // setupFilesAfterEnv: [],
-  setupFilesAfterEnv: [
-    '<rootDir>/config/jest/setupTests.ts'
-  ],
+  setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
 
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
@@ -163,7 +155,7 @@ const config: Config = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom',
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -174,8 +166,8 @@ const config: Config = {
   // The glob patterns Jest uses to detect test files
   testMatch: [
     // `<rootDir>src/**/*(*.)@(spec|test).[tjls?(x)`
-    "**/__tests__/**/*.?([mc])[jt]s?(x)",
-    "**/?(*.)+(spec|test).?([mc])[jt]s?(x)"
+    '**/__tests__/**/*.?([mc])[jt]s?(x)',
+    '**/?(*.)+(spec|test).?([mc])[jt]s?(x)',
   ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped

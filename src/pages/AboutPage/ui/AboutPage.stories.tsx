@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
-import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Theme } from "app/providers/ThemeProvider";
-import AboutPage from "./AboutPage";
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider';
+import AboutPage from './AboutPage';
 
 const meta = {
-  title: "pages/AboutPage",
+  title: 'pages/AboutPage',
   component: AboutPage,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {},
 } satisfies Meta<typeof AboutPage>;
 

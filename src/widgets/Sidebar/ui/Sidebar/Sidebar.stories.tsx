@@ -1,15 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
-import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Theme } from "app/providers/ThemeProvider";
-import { Sidebar } from "./Sidebar";
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider';
+import { Sidebar } from './Sidebar';
 
 const meta = {
-  title: "widget/Sidebar",
+  title: 'widget/Sidebar',
   component: Sidebar,
-  tags: ["autodocs"],
-  argTypes: {
-  },
+  tags: ['autodocs'],
+  argTypes: {},
 } satisfies Meta<typeof Sidebar>;
 
 export default meta;

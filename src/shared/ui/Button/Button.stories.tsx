@@ -10,8 +10,7 @@ const meta = {
   title: 'shared/Button',
   component: Button,
   tags: ['autodocs'],
-  argTypes: {
-  },
+  argTypes: {},
   args: { onClick: fn() },
 } satisfies Meta<typeof Button>;
 
@@ -36,7 +35,5 @@ export const Dark: Story = {
     children: 'Text',
     theme: ThemeButton.CLEAR,
   },
-  decorators: [
-    ThemeDecorator(Theme.DARK),
-  ]
+  decorators: [ThemeDecorator(Theme.DARK)],
 };

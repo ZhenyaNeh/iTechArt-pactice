@@ -1,15 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
-import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Theme } from "app/providers/ThemeProvider";
-import { Loader } from "./Loader";
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider';
+import { Loader } from './Loader';
 
 const meta = {
-  title: "shared/Loader",
+  title: 'shared/Loader',
   component: Loader,
-  tags: ["autodocs"],
-  argTypes: {
-  },
+  tags: ['autodocs'],
+  argTypes: {},
 } satisfies Meta<typeof Loader>;
 
 export default meta;

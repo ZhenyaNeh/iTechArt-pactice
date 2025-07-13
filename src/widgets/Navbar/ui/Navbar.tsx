@@ -23,7 +23,7 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
         <div className={classNames([cls['navbar-center']])}>
           <AppLink to="/">{t('Ссылка на главную страницу')}</AppLink>
           <Separator variant="vertical" />
-          <AppLink to="/about">{t('Ссылка на сраницу о сайте')}</AppLink>
+          <AppLink to="/about">{t('Ссылка на страницу о сайте')}</AppLink>
         </div>
         <div className={classNames([cls['navbar-right']])}>
           <ThemeSwitcher />

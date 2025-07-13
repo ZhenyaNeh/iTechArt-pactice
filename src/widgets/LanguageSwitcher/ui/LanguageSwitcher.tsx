@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './LanguageSwitcher.module.scss';
 import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui/Button/Button';
-import "../../../../config/jest/jest.config"
+import '../../../../config/jest/jest.config';
 
 interface LanguageSwitcherProps {
   className?: string;
@@ -16,7 +16,10 @@ export const LanguageSwitcher = ({ className = '' }: LanguageSwitcherProps) => {
   };
 
   return (
-    <Button onClick={toggleLanguage} className={classNames([cls['language-switcher'], className])}>
+    <Button
+      onClick={toggleLanguage}
+      className={classNames([cls['language-switcher'], className])}
+    >
       {t('Язык')}
     </Button>
   );

@@ -1,15 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 
-import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Theme } from "app/providers/ThemeProvider";
-import { Navbar } from "./Navbar";
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider';
+import { Navbar } from './Navbar';
 
 const meta = {
-  title: "widget/Navbar",
+  title: 'widget/Navbar',
   component: Navbar,
-  tags: ["autodocs"],
-  argTypes: {
-  },
+  tags: ['autodocs'],
+  argTypes: {},
 } satisfies Meta<typeof Navbar>;
 
 export default meta;

@@ -1,7 +1,7 @@
-@use "variables/global";
-@use "reset";
-@use "themes/dark";
-@use "themes/normal";
+@use 'variables/global';
+@use 'reset';
+@use 'themes/dark';
+@use 'themes/normal';
 
 $navbar-max-width: 1200px;
 $navbar-max-width-lg: 1400px;
