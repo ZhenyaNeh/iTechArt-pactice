@@ -1,57 +1,57 @@
-import storybook from "eslint-plugin-storybook";
+import storybook from 'eslint-plugin-storybook';
 
-import js from "@eslint/js";
-import globals from "globals";
-import tseslint from "typescript-eslint";
-import pluginReact from "eslint-plugin-react";
-import { defineConfig } from "eslint/config";
+import js from '@eslint/js';
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
+import pluginReact from 'eslint-plugin-react';
+import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
   {
     ignores: [
-      "**/dist/**",
-      "**/*.test.js",
-      "**/*.spec.ts",
-      "**/node_modules/**",
-      "**/.next/**",
-      "**/out/**",
-      "**/coverage/**",
-      "**/public/**",
-      "**/*.config.js",
+      '**/dist/**',
+      '**/*.test.js',
+      '**/*.spec.ts',
+      '**/node_modules/**',
+      '**/.next/**',
+      '**/out/**',
+      '**/coverage/**',
+      '**/public/**',
+      '**/*.config.js',
     ],
   },
   {
-    files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+    files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     settings: {
       react: {
-        version: "detect",
+        version: 'detect',
       },
     },
     plugins: { js },
-    extends: ["js/recommended"],
+    extends: ['js/recommended', 'plugin:prettier/recommended'],
   },
   {
-    files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+    files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     languageOptions: { globals: globals.browser },
   },
   tseslint.configs.recommended,
-  storybook.configs["flat/recommended"],
+  storybook.configs['flat/recommended'],
   pluginReact.configs.flat.recommended,
-  pluginReact.configs.flat["jsx-runtime"],
+  pluginReact.configs.flat['jsx-runtime'],
   {
-    files: ["**/*.{jsx,tsx,js,ts}"],
+    files: ['**/*.{jsx,tsx,js,ts}'],
     rules: {
-      "react/prop-types": "off",
-      "react/display-name": "off",
-      "@typescript-eslint/no-unused-vars": [
-        "error",
+      'react/prop-types': 'off',
+      'react/display-name': 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
         {
-          args: "all",
-          argsIgnorePattern: "^_",
-          caughtErrors: "all",
-          caughtErrorsIgnorePattern: "^_",
-          destructuredArrayIgnorePattern: "^_",
-          varsIgnorePattern: "^_",
+          args: 'all',
+          argsIgnorePattern: '^_',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
           ignoreRestSiblings: true,
         },
       ],
