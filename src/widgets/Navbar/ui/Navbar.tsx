@@ -6,6 +6,10 @@ import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { Burger } from 'widgets/Burger';
 import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
 import { useTranslation } from 'react-i18next';
+import { useCallback, useState } from 'react';
+import { Modal } from 'shared/ui/Modal/Modal';
+import { Button } from 'shared/ui/Button/Button';
+import { UserRound } from 'lucide-react';
 
 interface NavbarProps {
   className?: string;
@@ -13,6 +17,11 @@ interface NavbarProps {
 
 export const Navbar = ({ className = '' }: NavbarProps) => {
   const { t } = useTranslation();
+  const [isAuthModal, setIsAuthModal] = useState(false);
+
+  const onToggleModal = useCallback(() => {
+    setIsAuthModal(prev => !prev);
+  }, []);
 
   return (
     <div className={classNames([cls['navbar-wrapper'], className])}>
@@ -26,6 +35,10 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
           <AppLink to="/about">{t('Ссылка на страницу о сайте')}</AppLink>
         </div>
         <div className={classNames([cls['navbar-right']])}>
+          <Button onClick={onToggleModal}>
+            <UserRound />
+          </Button>
+          <Separator variant="vertical" className={cls.separator} />
           <ThemeSwitcher />
           <Separator variant="vertical" className={cls.separator} />
           <LanguageSwitcher />
@@ -38,6 +51,9 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
         variant="horizontal"
         className={classNames([cls['navbar-width']])}
       />
+      <Modal isOpen={isAuthModal} onClose={onToggleModal}>
+        Test
+      </Modal>
     </div>
   );
 };

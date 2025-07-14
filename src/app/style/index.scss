@@ -12,6 +12,12 @@ $navbar-breakpoint-lg: 2400px;
   padding: 0;
 }
 
+body {
+  font: var(--font-m);
+  background: var(--bg-color);
+  color: var(--primary-color);
+}
+
 .app {
   font: var(--font-m);
   background: var(--bg-color);

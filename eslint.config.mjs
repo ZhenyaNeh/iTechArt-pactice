@@ -5,6 +5,7 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import pluginReact from 'eslint-plugin-react';
 import { defineConfig } from 'eslint/config';
+import reactHooks from 'eslint-plugin-react-hooks';
 
 export default defineConfig([
   {
@@ -38,6 +39,7 @@ export default defineConfig([
   storybook.configs['flat/recommended'],
   pluginReact.configs.flat.recommended,
   pluginReact.configs.flat['jsx-runtime'],
+  reactHooks.configs['recommended-latest'],
   {
     files: ['**/*.{jsx,tsx,js,ts}'],
     rules: {
