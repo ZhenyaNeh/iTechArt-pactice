@@ -15,14 +15,16 @@ interface Props {
   className?: string;
   isOpen?: boolean;
   onClose?: () => void;
+  lazy?: boolean;
 }
 
 const ANIMATION_DELAY = 200;
 
 export const Modal: FC<PropsWithChildren<Props>> = (props) => {
-  const { className = '', children, isOpen = false, onClose } = props;
+  const { className = '', children, isOpen = false, onClose, lazy } = props;
 
   const [isClosing, setIsClosing] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const timeRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   const closeHandle = useCallback(() => {
@@ -49,6 +51,12 @@ export const Modal: FC<PropsWithChildren<Props>> = (props) => {
   );
 
   useEffect(() => {
+    if(isOpen){
+      setIsMounted(true);
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
     if (isOpen) {
       window.addEventListener('keydown', onKeyDown);
     }
@@ -63,6 +71,10 @@ export const Modal: FC<PropsWithChildren<Props>> = (props) => {
     [cls.opened]: isOpen,
     [cls.isClosing]: isClosing,
   };
+
+  if(lazy && !isMounted) {
+    return null;
+  }
 
   return (
     <Portal>

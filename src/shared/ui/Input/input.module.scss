@@ -1,0 +1,54 @@
+.input-wrapper {
+  display: flex;
+}
+
+.placeholder {
+  width: auto;
+  max-width: 200px;
+  margin-right: 5px;
+}
+
+.input-con {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: auto;
+  color: transparent;
+  text-shadow: 0 0 0 var(--primary-color);
+  font-size: var(--font-l);
+  
+  &:focus {
+    outline: none;
+    background: transparent;
+  }
+}
+
+.caret-wrapper {
+  flex-grow: 1;
+  position: relative;
+}
+
+.caret {
+  height: 3px;
+  width: 9px;
+  background: var(--primary-color);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  animation: blink 0.7s forwards infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.01;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

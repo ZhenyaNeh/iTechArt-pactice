@@ -10,6 +10,7 @@ import { useCallback, useState } from 'react';
 import { Modal } from 'shared/ui/Modal/Modal';
 import { Button } from 'shared/ui/Button/Button';
 import { UserRound } from 'lucide-react';
+import { LoginModal } from 'features/AuthByUsername';
 
 interface NavbarProps {
   className?: string;
@@ -51,9 +52,7 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
         variant="horizontal"
         className={classNames([cls['navbar-width']])}
       />
-      <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-        Test
-      </Modal>
+      <LoginModal isOpen={isAuthModal} onCLose={onToggleModal}/>
     </div>
   );
 };
