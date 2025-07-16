@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npx webpack serve --env port=3000",
+    "start:dev:server": "npx json-server ./json-server/db.json --port 8000",
     "build:prod": "npx webpack --env mode=production",
     "build:dev": "npx webpack --env mode=development",
     "lint:ts": "eslint .",
@@ -81,6 +82,7 @@
     "i18next": "^25.3.1",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
+    "json-server": "^1.0.0-beta.3",
     "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
