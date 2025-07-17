@@ -10,15 +10,14 @@ const MainPage = () => {
 
   const onChange = (val: string) => {
     setValue(val);
-  }
-
+  };
 
   return (
     <div>
       <BugButton></BugButton>
       {t('Главная страница')}
       <Counter />
-      <Input placeholder='Input text' value={value} onChange={onChange}/>
+      <Input placeholder="Input text" value={value} onChange={onChange} />
     </div>
   );
 };

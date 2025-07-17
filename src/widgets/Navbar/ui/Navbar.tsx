@@ -7,7 +7,6 @@ import { Burger } from 'widgets/Burger';
 import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
 import { useTranslation } from 'react-i18next';
 import { useCallback, useState } from 'react';
-import { Modal } from 'shared/ui/Modal/Modal';
 import { Button } from 'shared/ui/Button/Button';
 import { UserRound } from 'lucide-react';
 import { LoginModal } from 'features/AuthByUsername';
@@ -21,7 +20,7 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
   const [isAuthModal, setIsAuthModal] = useState(false);
 
   const onToggleModal = useCallback(() => {
-    setIsAuthModal(prev => !prev);
+    setIsAuthModal((prev) => !prev);
   }, []);
 
   return (
@@ -52,7 +51,7 @@ export const Navbar = ({ className = '' }: NavbarProps) => {
         variant="horizontal"
         className={classNames([cls['navbar-width']])}
       />
-      <LoginModal isOpen={isAuthModal} onCLose={onToggleModal}/>
+      <LoginModal isOpen={isAuthModal} onCLose={onToggleModal} />
     </div>
   );
 };

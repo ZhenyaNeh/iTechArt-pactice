@@ -1,5 +1,4 @@
 import {
-  ChangeEvent,
   FC,
   InputHTMLAttributes,
   memo,
@@ -48,6 +47,7 @@ export const Input: FC<Props> = memo((props) => {
     setCaretPosition(e.target.value.length);
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onSelect = (e: any) => {
     setCaretPosition(e?.target?.selectionStart || 0);
   };

@@ -6,6 +6,7 @@ import tseslint from 'typescript-eslint';
 import pluginReact from 'eslint-plugin-react';
 import { defineConfig } from 'eslint/config';
 import reactHooks from 'eslint-plugin-react-hooks';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default defineConfig([
   {
@@ -14,6 +15,7 @@ export default defineConfig([
       '**/*.test.js',
       '**/*.spec.ts',
       '**/node_modules/**',
+      '**/json-server/**',
       '**/.next/**',
       '**/out/**',
       '**/coverage/**',
@@ -29,7 +31,7 @@ export default defineConfig([
       },
     },
     plugins: { js },
-    extends: ['js/recommended', 'plugin:prettier/recommended'],
+    extends: ['js/recommended'],
   },
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
@@ -40,6 +42,7 @@ export default defineConfig([
   pluginReact.configs.flat.recommended,
   pluginReact.configs.flat['jsx-runtime'],
   reactHooks.configs['recommended-latest'],
+  eslintPluginPrettierRecommended,
   {
     files: ['**/*.{jsx,tsx,js,ts}'],
     rules: {

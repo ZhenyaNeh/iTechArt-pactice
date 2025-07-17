@@ -3,6 +3,7 @@ import { Button } from 'shared/ui/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { counterActions } from '../model/slice/counterSlice';
 import { getCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
+import { classNames } from 'shared/lib/classNames/classNames';
 
 interface Props {
   className?: string;
@@ -15,14 +16,14 @@ export const Counter: FC<Props> = (props) => {
 
   const increment = () => {
     dispatch(counterActions.increment());
-  }
-  
+  };
+
   const decrement = () => {
     dispatch(counterActions.decrement());
-  }
+  };
 
   return (
-    <div>
+    <div className={classNames([className])}>
       <h1>value: {counterValue}</h1>
       <Button onClick={increment}>inc</Button>
       <Button onClick={decrement}>dec</Button>

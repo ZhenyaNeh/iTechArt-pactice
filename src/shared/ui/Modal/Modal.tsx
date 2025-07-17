@@ -51,7 +51,7 @@ export const Modal: FC<PropsWithChildren<Props>> = (props) => {
   );
 
   useEffect(() => {
-    if(isOpen){
+    if (isOpen) {
       setIsMounted(true);
     }
   }, [isOpen]);
@@ -69,10 +69,10 @@ export const Modal: FC<PropsWithChildren<Props>> = (props) => {
 
   const mods: Record<string, boolean> = {
     [cls.opened]: isOpen,
-    [cls.isClosing]: isClosing,
+    [cls['is-closing']]: isClosing,
   };
 
-  if(lazy && !isMounted) {
+  if (lazy && !isMounted) {
     return null;
   }
 
